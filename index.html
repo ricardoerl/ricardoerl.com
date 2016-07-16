@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="container">
+	<h1 class="f-5-l lh-title lh-solid-ns b mv0">Este sitio tard&oacute; <a href="{{ site.baseurl }}" class="link dim black i"><span id="loadTime"></span> milisegundos</a> en cargar.</h1>
+	<div class="pv4">
+		<p class="f5 f3-ns">Soy <span class="b">Ricardo Ram&iacute;rez</span>, un desarrollador web con un fuerte enfoque en diseño, rendimiento, escalabilidad y experiencia de usuario en aplicaciones y sitios web.</p>
+		<p class="f5">Actualmente front-end developer @ <a href="https://happypunkpanda.com/" target="_blank" class="black">Happy Punk panda</a></p>
+	</div>
+</div>
+
+<script>
+	// Add time on load
+	window.onload = function(){
+		var t = performance.timing;
+    var e = document.getElementById('loadTime');
+
+	  setTimeout(function(){
+	    var loadTime = t.loadEventEnd - t.responseEnd;
+	    e.textContent = loadTime;
+	  }, 0);
+	}
+</script>

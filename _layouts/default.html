@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'es' }}">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400" rel="stylesheet">
+		<link href="{{ "/assets/css/style.css" | prepend: site.baseurl }}" rel="stylesheet">
+
+		<style>
+			body {
+				font-size: 18px;
+				line-height: 1.5;
+				color: #111;
+				font-family: 'Roboto Mono', monospace;
+				font-weight: 400;
+			}
+
+			.container {
+				max-width: 52em;
+				margin-left: auto;
+				margin-right: auto;
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		{% include header.html %}
+
+		{{ content }}
+
+		{% include footer.html %}
+
+	</body>
+
+</html>
