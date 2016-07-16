@@ -11,11 +11,9 @@ layout: default
 </div>
 
 <script>
-	// Add time on load
 	window.onload = function(){
 		var t = performance.timing;
     var e = document.getElementById('loadTime');
-
 	  setTimeout(function(){
 	    var loadTime = t.loadEventEnd - t.responseEnd;
 	    e.textContent = loadTime;

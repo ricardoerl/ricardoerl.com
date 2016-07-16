@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'es' }}">
 
@@ -10,8 +14,6 @@
 		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400" rel="stylesheet">
-		<link href="{{ "/assets/css/style.css" | prepend: site.baseurl }}" rel="stylesheet">
-
 		<style>
 			body {
 				font-size: 18px;
@@ -20,7 +22,6 @@
 				font-family: 'Roboto Mono', monospace;
 				font-weight: 400;
 			}
-
 			.container {
 				max-width: 52em;
 				margin-left: auto;
@@ -29,6 +30,7 @@
 				padding-right: 1em;
 			}
 		</style>
+		<link href="{{ "/assets/css/style.css" | prepend: site.baseurl }}" rel="stylesheet">
 	</head>
 
 	<body>

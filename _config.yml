@@ -1,11 +1,9 @@
 # Site settings
 title: ricardoerl.com
 description: > 
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Desarrollador web con un fuerte enfoque en diseño, rendimiento, escalabilidad y experiencia de usuario en aplicaciones y sitios web.
 baseurl: "" 
-url: "http://yourdomain.com"
+url: "http://ricardoerl.com"
 github: "ricardoerl"
 twitter: "ricardoerl"
 instagram: "ricardoerl"
