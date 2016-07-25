@@ -15,6 +15,28 @@ html {
   box-sizing: inherit;
 }
 
+body {
+	font-size: 18px;
+	line-height: 1.5;
+	color: #111;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
+}
+
+@media screen and (max-width: 48em) {
+	body {
+		font-size: 16px;
+	}
+}
+
+.container {
+	max-width: 52em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
 /* Colors */
 $black: #111;
 $green: #2ecc40;
