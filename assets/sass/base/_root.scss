@@ -20,7 +20,7 @@ body {
 	line-height: 1.5;
 	color: #111;
 	font-family: 'Roboto Mono', monospace;
-	font-weight: 400;
+	font-weight: 300;
 }
 
 @media screen and (max-width: 48em) {
@@ -29,13 +29,13 @@ body {
 	}
 }
 
-.container {
-	max-width: 52em;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 1em;
-	padding-right: 1em;
-}
+// .container {
+// 	max-width: 52em;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	padding-left: 1em;
+// 	padding-right: 1em;
+// }
 
 /* Colors */
 $black: #111;
@@ -44,6 +44,9 @@ $green: #2ecc40;
 /* Helpers */
 .black { color: $black; }
 .green { color: $green; }
+
+.sans { font-family: 'Roboto', sans-serif; }
+.mono { font-family: 'Roboto Mono', monospace; }
 
 /* Global styles */
 .logo { height: 4.5em; }
