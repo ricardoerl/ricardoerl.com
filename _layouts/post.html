@@ -2,14 +2,12 @@
 layout: default
 ---
 
-<div class="mw9 center ph3">
-	<div class="mw7 mv4">
-		<article>
-    	<span class="silver">{{ page.date | date: "%-d/%-m/%Y" }}</span>
-    	<h1 class="f4 f1-ns mv0 lh-title black">{{ page.title }}</h1>
-    	<div class="mt4">
-    		{{ content }}
-    	</div>
-    </article>
-	</div>
+<div class="mw7 mv4 ph3">
+	<article>
+  	<span class="silver">{{ page.date | date: "%-d/%-m/%Y" }}</span>
+  	<h1 class="f4 f1-ns mv0 lh-title black">{{ page.title }}</h1>
+  	<div class="mt4">
+  		{{ content }}
+  	</div>
+  </article>
 </div>
