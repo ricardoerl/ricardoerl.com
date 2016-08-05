@@ -15,6 +15,15 @@ html {
   box-sizing: inherit;
 }
 
+::selection {
+  background: #111; /* WebKit/Blink Browsers */
+  color: #fff;
+}
+::-moz-selection {
+  background: #111; /* Gecko Browsers */
+  color: #fff;
+}
+
 body {
 	font-size: 18px;
 	line-height: 1.5;
