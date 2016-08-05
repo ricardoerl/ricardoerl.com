@@ -2,6 +2,7 @@
  * Set up a decent box model on the root element
  */
 html {
+	font-size: 21px;
   box-sizing: border-box;
 }
 
@@ -25,7 +26,6 @@ html {
 }
 
 body {
-	font-size: 21px;
 	line-height: 1.5;
 	color: #111;
 	font-family: 'Roboto Mono', monospace;
@@ -33,7 +33,7 @@ body {
 }
 
 @media screen and (max-width: 48em) {
-	body {
+	html {
 		font-size: 16px;
 	}
 }
