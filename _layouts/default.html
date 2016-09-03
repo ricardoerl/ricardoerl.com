@@ -14,24 +14,18 @@ layout: compress
 		<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 		<link rel="dns-prefetch" href="https://google-analytics.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Roboto:400,700" rel="stylesheet">
+		<style>
+			{% include un.style.css %}
+		</style>
 
-		{% capture style %}{% include style.scss %}{% endcapture %}
-
-	  <style>
-	  {{ style | scssify }}
-	  </style>
-
-		<!-- <link href="{{ "/assets/css/style.css" | prepend: site.baseurl }}" rel="stylesheet"> -->
 		<link rel="shortcut icon" type="image/png" href="{{ "/favicon.png" | prepend: site.baseurl }}"/>
 
 		{% seo %}
 
 	</head>
 
-	<body>
+	<body class="pv5 pv6-ns">
 
 		{% include header.html %}
 

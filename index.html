@@ -2,45 +2,46 @@
 layout: default
 ---
 
-<div class="mw9 center ph3">
-	<div class="pv4">
-		<div class="mw7">
-			<h1 class="f5 fw4 f3-ns lh-copy">Soy <span class="b">Ricardo Ram&iacute;rez</span>, un desarrollador web con un fuerte enfoque en diseño, rendimiento, escalabilidad y experiencia de usuario en aplicaciones y sitios web.</h1>
-			<p>Actualmente front-end developer @ <a href="https://happypunkpanda.com/" target="_blank" class="link dim black">Happy Punk Panda</a></p>
+<div class="mw8 center ph3">
+	<div class="mw6">
+		<div class="pv4">
+			<h2 class="f4 fw4 lh-copy">Soy Ricardo Ram&iacute;rez, un desarrollador web con un fuerte enfoque en diseño, rendimiento, escalabilidad y accesibilidad en aplicaciones y sitios web.</h2>
+			<p class="mb0">Actualmente front-end developer @ <a href="https://happypunkpanda.com/" target="_blank" class="link">Happy Punk Panda</a></p>
 		</div>
 	</div>
-	<div class="pv4 bt b--light-gray">
-		<div class="cf">
-			<div class="fl w-100 w-50-ns pr3-ns">
-				<h2 class="f6 ttu">Proyectos</h2>
-				<ul class="list pl0">
-					<li class="mv1 pv1">
-						<a href="http://ricardoramirez.me/labs/hipsterify/" class="link dim black lh-title" target="_blank">Hipsterify &#10142;</a>
-					</li>
-					<li class="mv1 pv1">
-						<a href="http://calicheipsum.xyz/" class="link dim black lh-title" target="_blank">CalicheIpsum &#10142;</a>
-					</li>
-					<li class="mv1 pv1">
-						<a href="https://ahuacate.xyz/" class="link dim black lh-title" target="_blank">Ahuacate &#10142;</a>
-					</li>
-					<li class="mv1 pv1">
-						<p class="strike mv0 lh-title">Made in El Salvador (WIP)</p>
-					</li>
-					<li class="mv1 pv1">
-						<a href="https://github.com/ricardoerl/maeve" class="link dim black lh-title" target="_blank">Maeve &#10142;</a>
-					</li>
-				</ul>
-			</div>
-			<div class="fl w-100 w-50-ns pr3-ns">
-				<h2 class="f6 ttu">Blog</h2>
-				<ul class="list pl0">
-					{% for post in site.posts %}
-				    <li class="mv1 pv1">
-				      <a href="{{ post.url }}" class="link dim fw4 black db lh-title">{{ post.title }} &#10142;</a>
-				    </li>
-				  {% endfor %}
-				</ul>
-			</div>
-		</div>
+	<div class="mw6">
+		<section class="pv2">
+			<h3 class="f5 fw3">Blog</h3>
+			<ul class="list pl0">
+				{% for post in site.posts %}
+			    <li class="mv1 pv1">
+			      <h4 class="f5 mv0"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+			    </li>
+			  {% endfor %}
+			</ul>
+		</section>
+		<section class="pv2">
+			<h3 class="f5 fw3">Proyectos</h3>
+			<ul class="list pl0">
+				<li class="mv1 pv1">
+		      <h4 class="f5 mv0"><a href="http://horchatajs.xyz/" target="_blank">HorchataJS</a></h4>
+		    </li>
+				<li class="mv1 pv1">
+		      <h4 class="f5 mv0"><a href="http://gasolinasv.com/" target="_blank">GasolinaSV</a></h4>
+		    </li>
+		    <li class="mv1 pv1">
+		      <h4 class="f5 mv0"><a href="http://calicheipsum.xyz/" target="_blank">CalicheIpsum</a></h4>
+		    </li>
+		    <li class="mv1 pv1">
+		      <h4 class="f5 mv0"><a href="http://ricardoramirez.me/labs/hipsterify/" target="_blank">Hipsterify</a></h4>
+		    </li>
+		    <li class="mv1 pv1">
+		      <h4 class="f5 mv0"><a href="https://ahuacate.xyz/" target="_blank">Ahuacate</a></h4>
+		    </li>
+		    <li class="mv1 pv1">
+		      <h4 class="f5 mv0"><a href="https://github.com/ricardoerl/maeve" target="_blank">Maeve</a></h4>
+		    </li>
+			</ul>
+		</section>
 	</div>
 </div>
