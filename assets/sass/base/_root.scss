@@ -56,6 +56,10 @@ a {
 	}
 }
 
+table {
+	margin: 3em 0;
+}
+
 /* Helpers */
 .black { color: $black; }
 .green { color: $green; }
@@ -67,4 +71,3 @@ a {
 		border: none;
 	}
 }
-
