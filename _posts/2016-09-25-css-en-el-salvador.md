@@ -82,11 +82,11 @@ Según [HTTTP Archive](http://httparchive.org/interesting.php) el peso promedio 
 ## 16 Media Queries
 A pesar que [elblog.com](http://elblog.com/) tiene una estructura bastante simple (2 columnas), es interesante observar que son necesarias 16 declaraciones de Media Queries para poder visualizar su contenido en varios dispositivos.
 
-## 66 archivo CSS
+## 66 archivos CSS
 Más archivos de CSS externos significan más peticiones. Más peticiones significa una carga más lenta del contenido. Existen herramientas que permiten concatenar y minificar archivos de CSS para que solo sea necesario cargar un solo archivo, no 6. Mucho menos 66 archivos.
 
-## El objetivo son los usuarios
-Al final lo único que a un usuario le interesa es obtener el contenido rápido y accesible. Por esa razón considero que es importante discutir este tipo de temas, no importando el tamaño o el volumen de tráfico que tengamos.
+## El objetivo son los usuarios (y nosotros)
+Al final lo único que a un usuario le interesa es obtener el contenido rápido y accesible, pero tambien es importante tener en cuenta que el código que escribamos debe ser mantenido por alguien, por esa razón considero que es importante discutir este tipo de temas, no importando el tamaño o el volumen de tráfico que tengamos.
 
 #### Lecturas recomendadas
 * [CSS Escalable](http://mrmrs.io/writing/2016/03/24/scalable-css/) [Inglés]
