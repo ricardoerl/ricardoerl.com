@@ -17,7 +17,7 @@ Puedes navegar, hacer scroll y dar click en cualquier punto para ver esa publica
 
 ## Aprendiendo React
 
-La filosofía de componentes de React es por mucho uno de lo temas más interesantes de esta librería y gracias a este proyecto he podido implementar finalmente algunos de los conceptos básico en una aplicación real. El código del proyecto está disponible en Github.
+La filosofía de componentes de React es por mucho uno de lo temas más interesantes de esta librería y gracias a este proyecto he podido implementar finalmente algunos de los conceptos básico en una aplicación real. [El código del proyecto está disponible Github](https://github.com/ricardoerl/life-in-dots).
 
 ## Políticas de privacidad de la aplicación
 
