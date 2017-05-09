@@ -1,5 +1,5 @@
 # Site settings
-title: ricardoerl.com
+title: ricardoerl
 description: > 
   Desarrollador web con un fuerte enfoque en diseño, rendimiento, escalabilidad y accesibilidad en aplicaciones y sitios web.
 baseurl: "" 
@@ -18,7 +18,7 @@ kramdown:
 
 # Sass settings
 sass:
-  sass_dir: assets/sass
+  sass_dir: css
   style: :compressed
 
 # Build settings

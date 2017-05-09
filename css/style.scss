@@ -1,0 +1,45 @@
+---
+---
+
+html,
+body {
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.header {
+    width: 100%;
+    @media screen and (min-width: 60em) {
+        position: fixed;
+        width: 100%;
+        height: 8em;
+        left: 8em;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        transform-origin: bottom left;
+        transform: rotate(-90deg);
+        justify-content: flex-start;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &__image {
+        width: 32px;
+        height: 32px;
+    }
+    &__title {
+        margin: 0;
+    }
+    @media screen and (min-width: 60em) {
+        &__image {
+            width: 42px;
+            height: 42px;
+        }
+    }
+}
