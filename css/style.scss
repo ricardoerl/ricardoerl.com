@@ -19,20 +19,9 @@ a {
 }
 
 .header {
+    display: flex;
+    align-items: center;
     width: 100%;
-    @media screen and (min-width: 60em) {
-        position: fixed;
-        width: 100%;
-        height: 8em;
-        left: 8em;
-        bottom: 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        transform-origin: bottom left;
-        transform: rotate(-90deg);
-        justify-content: flex-start;
-    }
 }
 
 .logo {
