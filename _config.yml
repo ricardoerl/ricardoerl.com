@@ -1,8 +1,8 @@
 # Site settings
 title: ricardoerl
-description: > 
+description: >
   Desarrollador web con un fuerte enfoque en diseño, rendimiento, escalabilidad y accesibilidad en aplicaciones y sitios web.
-baseurl: "" 
+baseurl: ""
 url: "http://ricardoerl.com"
 logo: "/assets/images/logo_circle_black_white-black.png"
 github: "ricardoerl"

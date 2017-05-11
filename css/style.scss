@@ -1,12 +1,23 @@
 ---
 ---
 
+$black: #000;
+$blue: #357EDD;
+$dark-blue: #00449E;
+
 html,
 body {
     height: 100%;
-    font-size: 18px;
+    font-size: 21px;
     line-height: 1.5;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+
 .header {
     width: 100%;
     @media screen and (min-width: 60em) {
@@ -30,16 +41,10 @@ body {
     text-decoration: none;
 
     &__image {
-        width: 32px;
-        height: 32px;
+        width: 2em;
+        height: 2em;
     }
     &__title {
         margin: 0;
-    }
-    @media screen and (min-width: 60em) {
-        &__image {
-            width: 42px;
-            height: 42px;
-        }
     }
 }
