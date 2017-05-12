@@ -1,10 +1,10 @@
 # Site settings
 title: ricardoerl
 description: >
-  Desarrollador web con un fuerte enfoque en diseño, rendimiento, escalabilidad y accesibilidad en aplicaciones y sitios web.
+  Ricardo Ramírez is a web developer with a strong focus on design, performance, scalability and accessibility in applications and websites.
 baseurl: ""
 url: "http://ricardoerl.com"
-logo: "/assets/images/logo_circle_black_white-black.png"
+logo: "./logo.png"
 github: "ricardoerl"
 twitter: "ricardoerl"
 instagram: "ricardoerl"
