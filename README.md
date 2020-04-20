@@ -1,1 +1,3 @@
 # ricardoerl.com
+
+Personal blog
