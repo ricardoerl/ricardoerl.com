@@ -25,6 +25,20 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require('tailwindcss')],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        develop: false,
+        tailwindcss: true,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
   ],
