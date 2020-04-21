@@ -19,8 +19,8 @@ const Layout = ({ children }) => {
           </div>
         </div>
         <ul className="menu">
-          <li>Artículos</li>
-          <li>Acerca de</li>
+          <li>Articles</li>
+          <li>About me</li>
         </ul>
       </header>
       <main>{children}</main>
