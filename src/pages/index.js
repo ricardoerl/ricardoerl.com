@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
@@ -8,13 +8,9 @@ const IndexPage = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  const posts = edges.map(
-    ({
-      node: {
-        frontmatter: { title },
-      },
-    }) => title,
-  );
+  const posts = edges.map(({ node: { frontmatter: { title, path } } }) => (
+    <Link to={path}>{title}</Link>
+  ));
 
   return (
     <Layout>
