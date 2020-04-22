@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import { Link } from 'gatsby';
 
 const Layout = ({ children }) => {
   return (
@@ -20,7 +21,9 @@ const Layout = ({ children }) => {
         </div>
         <ul className="menu">
           <li>Articles</li>
-          <li>About me</li>
+          <li>
+            <Link to="/about">About me</Link>
+          </li>
         </ul>
       </header>
       <main>{children}</main>

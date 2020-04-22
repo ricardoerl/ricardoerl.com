@@ -1,29 +1,34 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import kebabCase from 'lodash/kebabCase';
+import Layout from '../components/layout';
 
-export default function Template({ data }) {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+export default ({ data }) => {
+  const post = data.markdownRemark;
+  const tags = post.frontmatter.tags;
   return (
-    <>
-      <h1>{frontmatter.title}</h1>
-      <h2>{frontmatter.date}</h2>
-      <div
-        className="blog-post-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </>
+    <Layout>
+      <h1>{post.frontmatter.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <ul>
+        {tags.map((tag) => (
+          <li>
+            <Link to={`/tags/${kebabCase(tag)}`}>{tag}</Link>
+          </li>
+        ))}
+      </ul>
+      <Link to="/">Go back home</Link>
+    </Layout>
   );
-}
+};
 
-export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
         title
+        tags
       }
     }
   }

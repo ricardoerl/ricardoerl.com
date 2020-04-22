@@ -8,9 +8,19 @@ const IndexPage = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  const posts = edges.map(({ node: { frontmatter: { title, path } } }) => (
-    <Link to={path}>{title}</Link>
-  ));
+  const posts = edges.map(
+    ({
+      node: {
+        id,
+        fields: { slug },
+        frontmatter: { title },
+      },
+    }) => (
+      <Link key={id} to={slug}>
+        {title}
+      </Link>
+    ),
+  );
 
   return (
     <Layout>
@@ -28,6 +38,9 @@ export const pageQuery = graphql`
         node {
           id
           excerpt(pruneLength: 250)
+          fields {
+            slug
+          }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             path
