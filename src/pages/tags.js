@@ -1,14 +1,14 @@
 import React from 'react';
 import kebabCase from 'lodash/kebabCase';
 import { Link, graphql } from 'gatsby';
-import Layout from '../components/layout';
+import IndexLayout from '../components/indexLayout';
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
   },
 }) => (
-  <Layout>
+  <IndexLayout>
     <h1>Tags</h1>
     <ul>
       {group.map((tag) => (
@@ -20,7 +20,7 @@ const TagsPage = ({
       ))}
     </ul>
     <Link to="/">Go back home</Link>
-  </Layout>
+  </IndexLayout>
 );
 
 export default TagsPage;

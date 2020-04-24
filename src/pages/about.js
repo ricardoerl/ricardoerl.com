@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Layout from '../components/layout';
+import IndexLayout from '../components/indexLayout';
 
 const SecondPage = () => (
-  <Layout>
+  <IndexLayout>
     <h1>Welcome to About me</h1>
     <Link to="/">Go back home</Link>
-  </Layout>
+  </IndexLayout>
 );
 
 export default SecondPage;
