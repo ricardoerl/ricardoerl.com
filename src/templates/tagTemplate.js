@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Layout from '../components/layout';
+import IndexLayout from '../components/indexLayout';
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -10,7 +10,7 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`;
 
   return (
-    <Layout>
+    <IndexLayout>
       <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
@@ -29,7 +29,7 @@ const Tags = ({ pageContext, data }) => {
       <p>
         <Link to="/">Go back home</Link>
       </p>
-    </Layout>
+    </IndexLayout>
   );
 };
 

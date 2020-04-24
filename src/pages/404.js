@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Layout from '../components/layout';
+import IndexLayout from '../components/indexLayout';
 
 const NotFoundPage = () => (
-  <Layout>
+  <IndexLayout>
     <h1>404</h1>
-  </Layout>
+  </IndexLayout>
 );
 
 export default NotFoundPage;

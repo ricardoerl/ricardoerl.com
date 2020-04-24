@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import SEO from '../components/seo';
-import Layout from '../components/layout';
+import IndexLayout from '../components/indexLayout';
 
 const IndexPage = ({
   data: {
@@ -24,10 +24,10 @@ const IndexPage = ({
   );
 
   return (
-    <Layout>
+    <IndexLayout>
       <SEO title="Home" />
       <p>{posts}</p>
-    </Layout>
+    </IndexLayout>
   );
 };
 
