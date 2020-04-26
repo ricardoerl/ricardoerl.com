@@ -37,6 +37,8 @@ module.exports = {
         printRejected: false,
         develop: false,
         tailwindcss: true,
+        whitelist: ['a'],
+        defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
       },
     },
     `gatsby-transformer-remark`,

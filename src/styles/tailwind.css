@@ -11,6 +11,8 @@ body {
   font-size: 18px;
 }
 
-a {
+a,
+a:visited {
   color: #fe5c43;
+  text-decoration: underline;
 }
