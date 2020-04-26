@@ -8,8 +8,8 @@ import { Link } from 'gatsby';
 const IndexLayout = ({ children }) => {
   return (
     <div className="container mx-auto pt-6 px-4">
-      <div className="grid grid-cols-3 gap-6">
-        <div className="col-span-3 md:col-span-1">
+      <div className="grid grid-cols-5 gap-6">
+        <div className="col-span-5 md:col-span-2 lg:col-span-1">
           <header>
             <div className="vcard">
               <div className="vcard__avatar"></div>
@@ -31,7 +31,7 @@ const IndexLayout = ({ children }) => {
           </header>
           <footer>© {new Date().getFullYear()}</footer>
         </div>
-        <div className="col-span-3 md:col-span-2">
+        <div className="col-span-5 md:col-span-3">
           <main>{children}</main>
         </div>
       </div>
