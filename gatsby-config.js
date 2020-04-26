@@ -6,16 +6,23 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `ricardoerl.com`,
+        short_name: `ricardoerl`,
         start_url: `/`,
-        background_color: `#FFFFFF`,
-        theme_color: `#000000`,
-        icon: `src/images/avatar-thumbnail.jpg`, // This path is relative to the root of the site.
+        background_color: `#fefdf3`,
+        theme_color: `#2c223b`,
+        icon: `src/images/avatar-thumbnail.png`,
       },
     },
     {

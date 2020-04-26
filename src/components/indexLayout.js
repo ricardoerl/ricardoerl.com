@@ -4,34 +4,50 @@
 
 import React from 'react';
 import { Link } from 'gatsby';
+import Avatar from './avatar';
 
 const IndexLayout = ({ children }) => {
   return (
     <div className="container mx-auto pt-6 px-4">
-      <div className="grid grid-cols-5 gap-6">
-        <div className="col-span-5 md:col-span-2 lg:col-span-1">
+      <div className="grid grid-cols-3 gap-6">
+        <div className="col-span-3 md:col-span-1">
           <header>
             <div className="vcard">
-              <div className="vcard__avatar"></div>
-              <h1 className="vcard__name">Ricardo Ramírez</h1>
-              <div className="vcard__description">
-                <p>
-                  Front End Developer at Applaudo Studios and HorchataJS
-                  organizer. Loves building websites, hiking and watching
-                  movies.
-                </p>
+              <div className="w-20 rounded-full">
+                <Avatar />
               </div>
+              <h1 className="my-4 font-semibold text-lg">Ricardo Ramírez</h1>
+              <p className="my-4">
+                Front End Developer at Applaudo Studios and HorchataJS
+                organizer. Loves building websites, hiking and watching movies.
+              </p>
             </div>
-            <ul className="menu">
-              <li>Articles</li>
-              <li>
-                <Link to="/about">About me</Link>
+            <ul className="my-4">
+              <li className="my-1">
+                <Link
+                  className="no-underline"
+                  activeClassName="text-primary underline"
+                  to="/"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li className="my-1">
+                <Link
+                  className="no-underline"
+                  activeClassName="text-primary"
+                  to="/about"
+                >
+                  About me
+                </Link>
               </li>
             </ul>
           </header>
-          <footer>© {new Date().getFullYear()}</footer>
+          <footer className="text-xs">
+            &copy; 2020 &mdash; {new Date().getFullYear()} Ricardo Ramírez.
+          </footer>
         </div>
-        <div className="col-span-5 md:col-span-3">
+        <div className="col-span-3 md:col-span-2">
           <main>{children}</main>
         </div>
       </div>
