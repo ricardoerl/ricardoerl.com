@@ -17,7 +17,9 @@ const Avatar = () => {
 
   return (
     <Img
-      className="rounded-full"
+      title="Ricardo Ramírez"
+      alt="Avatar de Ricardo Ramírez"
+      className="w-20 rounded-full"
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
   );
