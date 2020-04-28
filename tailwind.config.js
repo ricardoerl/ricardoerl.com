@@ -1,9 +1,11 @@
 module.exports = {
   theme: {
-    colors: {
-      primary: 'var(--color-primary)',
-      secondary: 'var(--color-secondary)',
-      neutral: 'var(--color-neutral)',
+    extend: {
+      colors: {
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        neutral: 'var(--color-neutral)',
+      },
     },
   },
   variants: {},
