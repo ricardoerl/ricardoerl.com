@@ -7,8 +7,8 @@ const Avatar = () => {
     query {
       placeholderImage: file(relativePath: { eq: "avatar-thumbnail.png" }) {
         childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 110) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -19,8 +19,8 @@ const Avatar = () => {
     <Img
       title="Ricardo Ramírez"
       alt="Avatar de Ricardo Ramírez"
-      className="w-20 rounded-full"
-      fluid={data.placeholderImage.childImageSharp.fluid}
+      className="rounded-full"
+      fixed={data.placeholderImage.childImageSharp.fixed}
     />
   );
 };
