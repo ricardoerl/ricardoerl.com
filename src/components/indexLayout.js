@@ -13,10 +13,12 @@ const IndexLayout = ({ children }) => {
         <div className="col-span-3 md:col-span-1">
           <header>
             <div className="vcard">
-              <div className="w-20 rounded-full">
+              <div className="rounded-full">
                 <Avatar />
               </div>
-              <h1 className="my-4 font-semibold text-lg">Ricardo Ramírez</h1>
+              <h1 className="mt-3 mb-4 font-semibold text-lg">
+                Ricardo Ramírez
+              </h1>
               <p className="my-4">
                 Front End Developer at Applaudo Studios and HorchataJS
                 organizer. Loves building websites, hiking and watching movies.
