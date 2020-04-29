@@ -8,7 +8,6 @@ export default ({ data }) => {
   const { frontmatter, excerpt, html } = data.markdownRemark;
   const { tags, title, date, excerpt: extract } = frontmatter;
 
-  console.log(data);
   return (
     <BlogLayout>
       <BlogHeader
