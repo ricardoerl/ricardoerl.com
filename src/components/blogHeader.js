@@ -3,10 +3,10 @@ import { Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 
 const BlogHeader = (props) => {
-  const { date = '', title = '', tags = [], slug = '', extract = '' } = props;
+  const { date = '', title = '', tags = [], extract = '', path = '' } = props;
   const heading = <h1 className="text-2xl font-medium">{title}</h1>;
   return (
-    <header>
+    <>
       <span className="text-xs mr-1 uppercase">{date}</span>
       {tags.map((tag, index) => (
         <Link
@@ -17,9 +17,9 @@ const BlogHeader = (props) => {
           {tag}
         </Link>
       ))}
-      {slug ? <Link to={slug}>{heading}</Link> : heading}
-      <p className="my-3 text-lg">{extract}</p>
-    </header>
+      {path ? <Link to={path}>{heading}</Link> : heading}
+      <p className="my-3">{extract}</p>
+    </>
   );
 };
 
