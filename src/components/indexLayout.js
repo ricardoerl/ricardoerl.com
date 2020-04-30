@@ -12,10 +12,8 @@ const IndexLayout = ({ children }) => {
       <div className="grid grid-cols-3 gap-6">
         <div className="col-span-3 md:col-span-1">
           <header>
-            <div className="vcard">
-              <div className="rounded-full">
-                <Avatar />
-              </div>
+            <section>
+              <Avatar />
               <h1 className="mt-3 mb-4 font-semibold text-lg">
                 Ricardo Ramírez
               </h1>
@@ -23,13 +21,14 @@ const IndexLayout = ({ children }) => {
                 Front End Developer at Applaudo Studios and HorchataJS
                 organizer. Loves building websites, hiking and watching movies.
               </p>
-            </div>
+            </section>
             <ul className="my-4">
               <li className="my-1">
                 <Link
                   className="no-underline"
                   activeClassName="text-primary underline"
                   to="/"
+                  partiallyActive
                 >
                   Blog
                 </Link>

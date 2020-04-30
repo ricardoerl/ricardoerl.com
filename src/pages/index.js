@@ -14,8 +14,7 @@ const IndexPage = ({
     ({
       node: {
         id,
-        fields: { slug },
-        frontmatter: { date, title, tags = [], excerpt: extract },
+        frontmatter: { date, title, tags = [], excerpt: extract, path },
         excerpt,
       },
     }) => {
@@ -26,7 +25,7 @@ const IndexPage = ({
             date={date}
             tags={tags}
             extract={extract || excerpt}
-            slug={slug}
+            path={path}
           />
         </article>
       );
