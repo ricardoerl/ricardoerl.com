@@ -16,7 +16,7 @@ export default ({ data }) => {
         tags={tags}
         extract={extract || excerpt}
       />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
       <ul>
         {tags.map((tag, index) => (
           <li key={index}>
