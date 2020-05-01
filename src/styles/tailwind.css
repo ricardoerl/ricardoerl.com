@@ -1,15 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './markdown.css';
+
 /* CSS variables */
 :root {
   --color-primary: #fe5c43;
   --color-secondary: #2c223b;
   --color-neutral: #fefdf3;
 }
-
-/* tailwindcss */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import './markdown.css';
 
 /* Custom */
 html,

@@ -32,12 +32,7 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require('tailwindcss')],
-      },
-    },
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
@@ -45,6 +40,7 @@ module.exports = {
         develop: false,
         tailwindcss: true,
         whitelist: ['a'],
+        whitelistPatternsChildren: [/markdown/],
         defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
       },
     },

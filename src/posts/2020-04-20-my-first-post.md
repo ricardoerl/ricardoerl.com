@@ -12,10 +12,6 @@ excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 
 ### h3 Heading
 
-## Horizontal Rules
-
----
-
 ## Emphasis
 
 **This is bold text**
@@ -110,8 +106,5 @@ Inline footnote^[Text of inline footnote] definition.
 
 Duplicated footnote reference[^second].
 
-[^first]: Footnote **can have markup**
-
-  and multiple paragraphs.
-
+[^first]: Footnote
 [^second]: Footnote text.
