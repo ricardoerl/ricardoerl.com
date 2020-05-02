@@ -1,7 +1,7 @@
 /* Custom Gatsby code for prismjs */
 
 .gatsby-highlight-code-line {
-  background-color: #424242;
+  background-color: var(--color-secondary-alt);
   display: block;
   margin-right: -1em;
   margin-left: -1em;
@@ -23,7 +23,7 @@
  * and overflow that we removed from <pre>.
  */
 .gatsby-highlight {
-  background-color: #2d2d2d;
+  background-color: var(--color-secondary);
   border-radius: 0.25rem;
   margin: 0.5em 0;
   padding: 1em;

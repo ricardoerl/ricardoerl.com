@@ -61,7 +61,7 @@
 /* Code */
 .markdown pre,
 .markdown code {
-  @apply rounded;
+  @apply rounded bg-secondary;
 }
 .markdown code {
   @apply py-1 px-2;
