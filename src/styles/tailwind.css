@@ -1,6 +1,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import './prism.css';
+@import './prism-extended.css';
 @import './markdown.css';
 
 /* CSS variables */

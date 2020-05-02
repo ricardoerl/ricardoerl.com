@@ -61,15 +61,13 @@
 /* Code */
 .markdown pre,
 .markdown code {
-  @apply bg-secondary text-white rounded;
+  @apply rounded;
 }
 .markdown code {
   @apply py-1 px-2;
 }
 .markdown pre {
-  @apply p-2;
-  @apply mb-3;
-  @apply overflow-x-auto;
+  @apply p-2 mb-3 overflow-x-auto text-white;
 }
 .markdown pre > code {
   @apply p-0;

@@ -44,14 +44,7 @@ Ordered
 
 ## Code
 
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
+Inline css code `css≈.some-class { background-color: red }`
 
 Block code "fences"
 
@@ -61,9 +54,29 @@ Sample text here...
 
 Syntax highlighting
 
-```js
+```javascript
 var foo = function (bar) {
   return bar++;
+};
+
+console.log(foo(5));
+```
+
+Syntax highlighting with Line Numbers
+
+```javascript{numberLines: true}
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+```
+
+Syntax highlighting with Line highlighting
+
+```javascript
+var foo = function (bar) {
+  return bar++; // highlight-line
 };
 
 console.log(foo(5));
@@ -89,22 +102,3 @@ Like links, Images also have a footnote style syntax
 With a reference later in the document defining the URL location:
 
 [id]: https://octodex.github.com/images/dojocat.jpg 'The Dojocat'
-
-### Emojies
-
-🙌🎉⭐️
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-### Footnotes
-
-Footnote 1 link[^first].
-
-Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote
-[^second]: Footnote text.
