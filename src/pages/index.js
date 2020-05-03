@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Avatar from '../components/avatar';
 
 import SEO from '../components/seo';
 import IndexLayout from '../components/indexLayout';
@@ -14,19 +15,12 @@ const IndexPage = ({
     ({
       node: {
         id,
-        frontmatter: { date, title, tags = [], excerpt: extract, path },
-        excerpt,
+        frontmatter: { date, title, tags = [], path },
       },
     }) => {
       return (
         <article key={id}>
-          <BlogHeader
-            title={title}
-            date={date}
-            tags={tags}
-            extract={extract || excerpt}
-            path={path}
-          />
+          <BlogHeader title={title} date={date} path={path} />
         </article>
       );
     },
@@ -34,8 +28,37 @@ const IndexPage = ({
 
   return (
     <IndexLayout>
-      <SEO title="Home" />
-      {posts}
+      <SEO title="Ricardo Ramírez" />
+      <section className="md:h-64 grid grid-cols-3 gap-4 mb-8">
+        <div className="col-span-3 sm:col-span-1 flex items-center justify-center">
+          <Avatar className="rounded-full" />
+        </div>
+        <p className="col-span-3 sm:col-span-2 flex items-center justify-center sm:my-4 md:text-xl">
+          Hi, I'm Ricardo. I'm a Front End Developer at Applaudo Studios and
+          HorchataJS organizer. I love building websites, hiking and watching
+          movies.
+        </p>
+      </section>
+      <div class="grid grid-cols-2 gap-4">
+        <div className="col-span-2 sm:col-span-1">
+          <h2 className="mb-4">Blog</h2>
+          {posts}
+        </div>
+        <div className="col-span-2 sm:col-span-1">
+          <h2 className="mb-4">Projects</h2>
+          <ul>
+            <li className="mb-2">
+              <a
+                className="text-primary no-underline"
+                href="https://www.horchatajs.com/"
+                target="_blank"
+              >
+                <h1 className="text-2xl font-medium">HorchataJS</h1>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </IndexLayout>
   );
 };
@@ -48,7 +71,6 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
           fields {
             slug
           }
@@ -57,7 +79,6 @@ export const pageQuery = graphql`
             path
             title
             tags
-            excerpt
           }
         }
       }

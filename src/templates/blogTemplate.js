@@ -2,14 +2,14 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import BlogHeader from '../components/blogHeader';
-import BlogLayout from '../components/blogLayout';
+import IndexLayout from '../components/indexLayout';
 
 export default ({ data }) => {
   const { frontmatter, excerpt, html } = data.markdownRemark;
   const { tags, title, date, excerpt: extract } = frontmatter;
 
   return (
-    <BlogLayout>
+    <IndexLayout>
       <BlogHeader
         title={title}
         date={date}
@@ -25,7 +25,7 @@ export default ({ data }) => {
         ))}
       </ul>
       <Link to="/">Go back home</Link>
-    </BlogLayout>
+    </IndexLayout>
   );
 };
 
