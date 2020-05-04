@@ -8,7 +8,7 @@ import Footer from './footer';
 
 const IndexLayout = ({ children }) => {
   return (
-    <div className="container max-w-xl mx-auto pt-6 px-4">
+    <div className="container mx-auto pt-6 px-4">
       <Header />
       <main>{children}</main>
       <Footer />

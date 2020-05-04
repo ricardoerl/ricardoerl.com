@@ -9,17 +9,19 @@ const TagsPage = ({
   },
 }) => (
   <IndexLayout>
-    <h1>Tags</h1>
+    <h2 className="mb-4">Tags</h2>
     <ul>
       {group.map((tag) => (
-        <li key={tag.fieldValue}>
-          <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+        <li key={tag.fieldValue} className="mb-2">
+          <Link
+            to={`/tags/${kebabCase(tag.fieldValue)}/`}
+            className="text-primary no-underline"
+          >
             {tag.fieldValue} ({tag.totalCount})
           </Link>
         </li>
       ))}
     </ul>
-    <Link to="/">Go back home</Link>
   </IndexLayout>
 );
 

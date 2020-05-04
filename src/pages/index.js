@@ -15,7 +15,7 @@ const IndexPage = ({
     ({
       node: {
         id,
-        frontmatter: { date, title, tags = [], path },
+        frontmatter: { date, title, path },
       },
     }) => {
       return (
@@ -34,17 +34,21 @@ const IndexPage = ({
           <Avatar className="rounded-full" />
         </div>
         <p className="col-span-3 sm:col-span-2 flex items-center justify-center sm:my-4 md:text-xl">
-          Hi, I'm Ricardo. I'm a Front End Developer at Applaudo Studios and
-          HorchataJS organizer. I love building websites, hiking and watching
+          Hi, I'm Ricardo.{' '}
+          <span role="img" aria-label="Wave">
+            👋
+          </span>
+          <br /> I'm a Front End Developer at Applaudo Studios and HorchataJS
+          organizer. <br /> I love building websites, hiking and watching
           movies.
         </p>
       </section>
-      <div class="grid grid-cols-2 gap-4">
-        <div className="col-span-2 sm:col-span-1">
+      <div class="grid grid-cols-3 gap-4">
+        <div className="col-span-3 sm:col-span-2">
           <h2 className="mb-4">Blog</h2>
           {posts}
         </div>
-        <div className="col-span-2 sm:col-span-1">
+        <div className="col-span-3 sm:col-span-1">
           <h2 className="mb-4">Projects</h2>
           <ul>
             <li className="mb-2">
@@ -52,8 +56,9 @@ const IndexPage = ({
                 className="text-primary no-underline"
                 href="https://www.horchatajs.com/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                <h1 className="text-2xl font-medium">HorchataJS</h1>
+                HorchataJS
               </a>
             </li>
           </ul>

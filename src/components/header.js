@@ -4,7 +4,7 @@ import Avatar from './avatar';
 
 const Header = () => {
   const { pathname } = typeof window !== 'undefined' ? window.location : '';
-  const isHome = pathname == '/';
+  const isHome = pathname === '/';
   return (
     <header className="h-12 flex justify-between items-center mb-4">
       <Link className="flex items-center" to="/">
@@ -13,7 +13,12 @@ const Header = () => {
       </Link>
       <ul className="flex">
         <li className="mx-1 md:mx-2">
-          <Link className="no-underline" to="/">
+          <Link
+            className="no-underline"
+            to="/blog"
+            activeClassName="text-primary"
+            partiallyActive
+          >
             Blog
           </Link>
         </li>

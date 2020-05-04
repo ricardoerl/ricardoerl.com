@@ -1,34 +1,34 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import IndexLayout from '../components/indexLayout';
+import BlogHeader from '../components/blogHeader';
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
-  const { edges, totalCount } = data.allMarkdownRemark;
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`;
+  const { edges } = data.allMarkdownRemark;
 
   return (
     <IndexLayout>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields;
-          const { title } = node.frontmatter;
-          return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
-          );
-        })}
-      </ul>
-      <p>
-        <Link to="/tags">All tags</Link>
-      </p>
-      <p>
-        <Link to="/">Go back home</Link>
-      </p>
+      <div class="grid grid-cols-3 gap-4">
+        <div className="col-span-3 sm:col-span-2">
+          <h2 className="mb-4">{tag}</h2>
+          <ul>
+            {edges.map(({ node }, index) => {
+              const { title, date, path } = node.frontmatter;
+              return (
+                <li key={index}>
+                  <BlogHeader title={title} date={date} path={path} />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="col-span-3 sm:col-span-1">
+          <Link to="/tags" className="text-primary">
+            All tags
+          </Link>
+        </div>
+      </div>
     </IndexLayout>
   );
 };
@@ -49,7 +49,9 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
             title
+            path
           }
         }
       }

@@ -1,6 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-import kebabCase from 'lodash/kebabCase';
+import { graphql } from 'gatsby';
 import BlogHeader from '../components/blogHeader';
 import IndexLayout from '../components/indexLayout';
 
@@ -10,21 +9,15 @@ export default ({ data }) => {
 
   return (
     <IndexLayout>
-      <BlogHeader
-        title={title}
-        date={date}
-        tags={tags}
-        extract={extract || excerpt}
-      />
-      <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
-      <ul>
-        {tags.map((tag, index) => (
-          <li key={index}>
-            <Link to={`/tags/${kebabCase(tag)}`}>{tag}</Link>
-          </li>
-        ))}
-      </ul>
-      <Link to="/">Go back home</Link>
+      <div className="max-w-xl">
+        <BlogHeader
+          title={title}
+          date={date}
+          tags={tags}
+          extract={extract || excerpt}
+        />
+        <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
     </IndexLayout>
   );
 };
