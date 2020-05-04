@@ -33,15 +33,17 @@ const IndexPage = ({
         <div className="col-span-3 sm:col-span-1 flex items-center justify-center">
           <Avatar className="rounded-full" />
         </div>
-        <p className="col-span-3 sm:col-span-2 flex items-center justify-center sm:my-4 md:text-xl">
-          Hi, I'm Ricardo.{' '}
-          <span role="img" aria-label="Wave">
-            👋
-          </span>
-          <br /> I'm a Front End Developer at Applaudo Studios and HorchataJS
-          organizer. <br /> I love building websites, hiking and watching
-          movies.
-        </p>
+        <div className="col-span-3 sm:col-span-2 flex items-center justify-center sm:my-4 md:text-xl">
+          <p>
+            Hi, I'm Ricardo.{' '}
+            <span role="img" aria-label="Wave">
+              👋
+            </span>
+            <br /> I'm a Front End Developer at Applaudo Studios and HorchataJS
+            organizer. <br /> I love building websites, hiking and watching
+            movies.
+          </p>
+        </div>
       </section>
       <div class="grid grid-cols-3 gap-4">
         <div className="col-span-3 sm:col-span-2">
