@@ -29,11 +29,11 @@ const IndexPage = ({
   return (
     <IndexLayout>
       <SEO title="Ricardo Ramírez" />
-      <section className="md:h-64 grid grid-cols-3 gap-4 mb-8">
-        <div className="col-span-3 sm:col-span-1 flex items-center justify-center">
+      <section className="md:h-64 grid grid-cols-6 gap-4 mb-8">
+        <div className="col-span-6 sm:col-span-2 flex items-center justify-center">
           <Avatar className="rounded-full" />
         </div>
-        <div className="col-span-3 sm:col-span-2 flex items-center justify-center sm:my-4 md:text-xl">
+        <div className="col-span-6 sm:col-start-3 sm:col-span-4 flex items-center sm:my-4 md:text-xl">
           <p>
             Hi, I'm Ricardo.{' '}
             <span role="img" aria-label="Wave">
@@ -45,12 +45,12 @@ const IndexPage = ({
           </p>
         </div>
       </section>
-      <div class="grid grid-cols-3 gap-4">
-        <div className="col-span-3 sm:col-span-2">
+      <div class="grid grid-cols-6 gap-4 ">
+        <div className="col-span-6 md:col-start-3 sm:col-span-3">
           <h2 className="mb-4">Blog</h2>
           {posts}
         </div>
-        <div className="col-span-3 sm:col-span-1">
+        <div className="col-span-6 md:col-span-1">
           <h2 className="mb-4">Projects</h2>
           <ul>
             <li className="mb-2">

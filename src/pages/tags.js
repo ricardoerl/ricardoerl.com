@@ -9,19 +9,25 @@ const TagsPage = ({
   },
 }) => (
   <IndexLayout>
-    <h2 className="mb-4">Tags</h2>
-    <ul>
-      {group.map((tag) => (
-        <li key={tag.fieldValue} className="mb-2">
-          <Link
-            to={`/tags/${kebabCase(tag.fieldValue)}/`}
-            className="text-primary no-underline"
-          >
-            {tag.fieldValue} ({tag.totalCount})
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <div className="grid grid-cols-6 gap-4">
+      <div className="col-span-6 md:col-start-2 sm:col-span-1">
+        <h2 className="text-4xl mb-4">Tags</h2>
+      </div>
+      <div className="col-span-6 sm:col-span-3">
+        <ul>
+          {group.map((tag) => (
+            <li key={tag.fieldValue} className="mb-2">
+              <Link
+                to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                className="text-primary no-underline"
+              >
+                {tag.fieldValue} ({tag.totalCount})
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   </IndexLayout>
 );
 

@@ -28,9 +28,11 @@ const IndexPage = ({
   return (
     <IndexLayout>
       <SEO title="Blog" />
-      <div className="max-w-xl">
-        <h2 className="mb-4">Blog</h2>
-        {posts}
+      <div className="grid grid-cols-6 gap-4">
+        <div className="col-span-6 md:col-start-2 sm:col-span-1">
+          <h2 className="text-4xl mb-4">Blog</h2>
+        </div>
+        <div className="col-span-6 sm:col-span-3">{posts}</div>
       </div>
     </IndexLayout>
   );

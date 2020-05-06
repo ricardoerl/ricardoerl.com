@@ -9,9 +9,11 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <IndexLayout>
-      <div class="grid grid-cols-3 gap-4">
-        <div className="col-span-3 sm:col-span-2">
-          <h2 className="mb-4">{tag}</h2>
+      <div className="grid grid-cols-6 gap-4">
+        <div className="col-span-6 md:col-start-2 sm:col-span-1">
+          <h2 className="text-4xl mb-4">{tag}</h2>
+        </div>
+        <div className="col-span-6 sm:col-span-3">
           <ul>
             {edges.map(({ node }, index) => {
               const { title, date, path } = node.frontmatter;
@@ -23,7 +25,7 @@ const Tags = ({ pageContext, data }) => {
             })}
           </ul>
         </div>
-        <div className="col-span-3 sm:col-span-1">
+        <div className="col-span-6 sm:col-span-1">
           <Link to="/tags" className="text-primary">
             All tags
           </Link>
