@@ -39,9 +39,18 @@ const IndexPage = ({
             <span role="img" aria-label="Wave">
               👋
             </span>
-            <br /> I'm a Front End Developer at Applaudo Studios and HorchataJS
-            organizer. <br /> I love building websites, hiking and watching
-            movies.
+            <br /> I'm a Front End Developer at Applaudo Studios and{' '}
+            <a
+              href="https://www.horchatajs.com/"
+              className="text-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              HorchataJS
+            </a>{' '}
+            organizer. <br /> I love building websites,{' '}
+            <a href="https://www.instagram.com/ricardoerl/">hiking</a> and{' '}
+            <a href="https://letterboxd.com/ricardoerl/">watching movies</a>.
           </p>
         </div>
       </section>
