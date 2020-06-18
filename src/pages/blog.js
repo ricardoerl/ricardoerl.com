@@ -14,12 +14,18 @@ const IndexPage = ({
     ({
       node: {
         id,
-        frontmatter: { date, title, path, excerpt },
+        frontmatter: { date, title, path, tags, excerpt },
       },
     }) => {
       return (
         <article key={id}>
-          <BlogHeader title={title} date={date} path={path} extract={excerpt} />
+          <BlogHeader
+            title={title}
+            date={date}
+            tags={tags}
+            path={path}
+            extract={excerpt}
+          />
         </article>
       );
     },
