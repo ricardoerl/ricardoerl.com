@@ -18,7 +18,7 @@ const BlogHeader = (props) => {
         </Link>
       ))}
       {path ? <Link to={path}>{heading}</Link> : heading}
-      <p className="my-3">{extract}</p>
+      {extract && <p className="my-2">{extract}</p>}
     </>
   );
 };

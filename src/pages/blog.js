@@ -14,12 +14,12 @@ const IndexPage = ({
     ({
       node: {
         id,
-        frontmatter: { date, title, tags = [], path },
+        frontmatter: { date, title, path, excerpt },
       },
     }) => {
       return (
         <article key={id}>
-          <BlogHeader title={title} date={date} path={path} />
+          <BlogHeader title={title} date={date} path={path} extract={excerpt} />
         </article>
       );
     },
@@ -54,6 +54,7 @@ export const pageQuery = graphql`
             path
             title
             tags
+            excerpt
           }
         }
       }

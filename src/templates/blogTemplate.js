@@ -4,22 +4,17 @@ import BlogHeader from '../components/blogHeader';
 import IndexLayout from '../components/indexLayout';
 
 export default ({ data }) => {
-  const { frontmatter, excerpt, html, fields } = data.markdownRemark;
-  const { tags, title, date, excerpt: extract, path } = frontmatter;
+  const { frontmatter, html, fields } = data.markdownRemark;
+  const { tags, title, date, path } = frontmatter;
   const { slug } = fields;
 
   return (
     <IndexLayout>
       <div className="grid grid-cols-6 gap-4">
         <div className="col-span-6 md:col-start-3 sm:col-span-3">
-          <BlogHeader
-            title={title}
-            date={date}
-            tags={tags}
-            extract={extract || excerpt}
-          />
+          <BlogHeader title={title} date={date} tags={tags} />
           <div
-            className="markdown"
+            className="markdown mt-2"
             dangerouslySetInnerHTML={{ __html: html }}
           />
           <p>
@@ -50,7 +45,6 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      excerpt(pruneLength: 250)
       fields {
         slug
       }
@@ -58,7 +52,6 @@ export const query = graphql`
         title
         tags
         date(formatString: "MMMM DD, YYYY")
-        excerpt
         path
       }
     }

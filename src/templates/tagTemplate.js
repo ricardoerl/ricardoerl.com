@@ -16,10 +16,15 @@ const Tags = ({ pageContext, data }) => {
         <div className="col-span-6 sm:col-span-3">
           <ul>
             {edges.map(({ node }, index) => {
-              const { title, date, path } = node.frontmatter;
+              const { title, date, path, excerpt } = node.frontmatter;
               return (
                 <li key={index}>
-                  <BlogHeader title={title} date={date} path={path} />
+                  <BlogHeader
+                    title={title}
+                    date={date}
+                    path={path}
+                    extract={excerpt}
+                  />
                 </li>
               );
             })}
@@ -54,6 +59,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             path
+            excerpt
           }
         }
       }
