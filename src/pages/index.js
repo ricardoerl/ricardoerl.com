@@ -72,6 +72,16 @@ const IndexPage = ({
                 HorchataJS
               </a>
             </li>
+            <li className="mb-2">
+              <a
+                className="text-primary no-underline"
+                href="https://svstamp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                El Salvador Stamp
+              </a>
+            </li>
           </ul>
         </div>
       </div>
