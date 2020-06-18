@@ -31,7 +31,7 @@
 /* Lists */
 .markdown ul,
 .markdown ol {
-  @apply p-0 mb-4 list-inside;
+  @apply p-0 mb-4 list-outside;
 }
 .markdown li > p,
 .markdown li > ul,
