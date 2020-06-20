@@ -21,7 +21,7 @@ export default ({ data }) => {
           />
           <p>
             <a
-              href={`http://twitter.com/share?text=${title}&amp;url=https://ricardoerl.com${path}&via=ricardoerl`}
+              href={`http://twitter.com/share?text=${title}&url=https://ricardoerl.com${path}&via=ricardoerl`}
               className="underline text-primary"
             >
               Share on Twitter
