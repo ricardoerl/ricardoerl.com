@@ -1,15 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import SEO from '../components/seo';
 import BlogHeader from '../components/blogHeader';
 import IndexLayout from '../components/indexLayout';
 
 export default ({ data }) => {
   const { frontmatter, html, fields } = data.markdownRemark;
-  const { tags, title, date, path } = frontmatter;
+  const { tags, title, date, path, excerpt } = frontmatter;
   const { slug } = fields;
 
   return (
     <IndexLayout>
+      <SEO title={title} description={excerpt} />
       <div className="grid grid-cols-6 gap-4">
         <div className="col-span-6 md:col-start-3 sm:col-span-3">
           <BlogHeader title={title} date={date} tags={tags} />
@@ -53,6 +55,7 @@ export const query = graphql`
         tags
         date(formatString: "MMMM DD, YYYY")
         path
+        excerpt
       }
     }
   }
