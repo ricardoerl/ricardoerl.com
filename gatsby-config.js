@@ -3,8 +3,8 @@ module.exports = {
     title: `ricardoerl.com`,
     description: `Personal blog by Ricardo Ramírez`,
     author: `@ricardoerl`,
-    image: `avatar-thumbnail.png`,
-    siteUrl: `https://ricardoerl.com/`,
+    image: `/avatar-thumbnail.png`,
+    siteUrl: `https://ricardoerl.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
