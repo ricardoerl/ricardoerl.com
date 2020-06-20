@@ -54,7 +54,7 @@ const IndexPage = ({
           </p>
         </div>
       </section>
-      <div class="grid grid-cols-6 gap-4 ">
+      <div className="grid grid-cols-6 gap-4 ">
         <div className="col-span-6 md:col-start-3 sm:col-span-3">
           <h2 className="mb-4">Blog</h2>
           {posts}
